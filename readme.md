@@ -1,1 +1,1 @@
-neste projeto trabalha-se uso de front end bem como html,css e java-script com projeto prático em página web com visual estilo netflix. Com apoio da instituição Alura
+neste projeto trabalha-se uso de front end bem como html,css e java-script com projeto prático em página web com visual estilo netflix  com apoio da instituição Alura
