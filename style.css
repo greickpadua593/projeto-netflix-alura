@@ -81,33 +81,29 @@ li {
 /* Responsividade para celulares */
 /* Responsividade para celulares (até 600px) */
 @media (max-width: 600px) {
-	.profiles {
-		flex-direction: column; /* Empilha os perfis em coluna no mobile */
-		gap: 18px; /* Reduz ainda mais o espaçamento */
-		align-items: center;
-	}
-	.profiles ul,
-	.profiles ol {
-		display: flex; /* Empilha listas em coluna */
-		flex-direction: column;
-		gap: 18px;
-		align-items: center;
-	}
-	.profile {
-		width: 90vw; /* Ocupa quase toda a largura da tela */
-		max-width: 320px;
-		margin: 0 auto;
-	}
-	.profile img {
-		width: 80px; /* Imagem menor no mobile */
-		height: 80px;
-	}
-	header {
-		padding: 24px 0 12px 0; /* Menos espaço no topo em telas pequenas */
-	}
-	header h1 {
-		font-size: 1.5rem; /* Título menor no mobile */
-	}
+   .profiles ul,
+   .profiles ol {
+	   display: grid;
+	   grid-template-columns: repeat(2, 1fr);
+	   gap: 18px;
+	   justify-items: center;
+	   align-items: center;
+   }
+   .profile {
+	   width: 90vw;
+	   max-width: 160px;
+	   margin: 0 auto;
+   }
+   .profile img {
+	   width: 80px;
+	   height: 80px;
+   }
+   header {
+	   padding: 24px 0 12px 0;
+   }
+   header h1 {
+	   font-size: 1.5rem;
+   }
 }
 /* Nenhuma alteração necessária. O CSS já cobre todos os perfis adicionados dinamicamente. */
 
