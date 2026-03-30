@@ -1,0 +1,217 @@
+/* Light mode: sobrescreve cores do dark mode */
+body.light-mode {
+	background: #f5f5f5; /* Fundo claro */
+	color: #222; /* Texto escuro */
+}
+body.light-mode header h1 {
+	color: #e50914;
+	text-shadow: none;
+}
+body.light-mode .profile {
+	background: #fff;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+body.light-mode .profile img {
+	border: 3px solid #e50914;
+	background: #eee;
+}
+body.light-mode figcaption {
+	color: #222;
+}
+/* Grid responsivo para exibir perfis em duas colunas (2x2, 2x3, etc.) */
+/* Grid responsivo para exibir perfis em duas colunas (2x2, 2x3, etc.) em telas médias */
+@media (min-width: 601px) {
+	.profiles ol {
+		display: grid; /* Usa grid para organizar os perfis */
+		grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
+		gap: 40px; /* Espaço entre os perfis */
+		justify-content: center; /* Centraliza o grid horizontalmente */
+		align-items: start; /* Alinha os itens ao topo */
+	}
+	.profiles li {
+		display: flex; /* Centraliza o conteúdo de cada célula do grid */
+		justify-content: center;
+		align-items: center;
+	}
+}
+/* Em telas grandes, listas ficam em linha (horizontal) */
+@media (min-width: 901px) {
+	.profiles ul {
+		display: flex; /* Layout em linha */
+		flex-direction: row; /* Direção horizontal */
+		gap: 40px; /* Espaço entre listas */
+		justify-content: center; /* Centraliza horizontalmente */
+		align-items: flex-start; /* Alinha ao topo */
+	}
+	.profiles ol {
+		display: flex; /* Layout em linha */
+		flex-direction: row;
+		gap: 40px;
+		justify-content: center;
+		align-items: flex-start;
+	}
+}
+/* Remove marcadores e espaçamentos das listas para manter o visual limpo */
+ul, ol {
+	list-style: none; /* Remove marcadores */
+	margin: 0; /* Remove margem padrão */
+	padding: 0; /* Remove padding padrão */
+}
+
+li {
+	margin: 0; /* Remove margem padrão dos itens */
+	padding: 0; /* Remove padding padrão dos itens */
+}
+/* Responsividade para tablets */
+/* Responsividade para tablets (até 900px) */
+@media (max-width: 900px) {
+	.profiles {
+		gap: 24px; /* Reduz o espaçamento entre perfis */
+		flex-wrap: wrap; /* Permite que os perfis quebrem linha */
+	}
+	.profile {
+		padding: 20px 8px 10px 8px; /* Reduz o padding */
+	}
+	.profile img {
+		width: 100px; /* Imagem menor em tablets */
+		height: 100px;
+	}
+}
+
+/* Responsividade para celulares */
+/* Responsividade para celulares (até 600px) */
+@media (max-width: 600px) {
+	.profiles {
+		flex-direction: column; /* Empilha os perfis em coluna no mobile */
+		gap: 18px; /* Reduz ainda mais o espaçamento */
+		align-items: center;
+	}
+	.profiles ul,
+	.profiles ol {
+		display: flex; /* Empilha listas em coluna */
+		flex-direction: column;
+		gap: 18px;
+		align-items: center;
+	}
+	.profile {
+		width: 90vw; /* Ocupa quase toda a largura da tela */
+		max-width: 320px;
+		margin: 0 auto;
+	}
+	.profile img {
+		width: 80px; /* Imagem menor no mobile */
+		height: 80px;
+	}
+	header {
+		padding: 24px 0 12px 0; /* Menos espaço no topo em telas pequenas */
+	}
+	header h1 {
+		font-size: 1.5rem; /* Título menor no mobile */
+	}
+}
+/* Nenhuma alteração necessária. O CSS já cobre todos os perfis adicionados dinamicamente. */
+
+/* Reset básico para remover margens e paddings padrões e garantir que o box-sizing seja border-box */
+* {
+	margin: 0; /* Remove a margem padrão de todos os elementos */
+	padding: 0; /* Remove o padding padrão de todos os elementos */
+	box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho total do elemento */
+}
+
+
+body {
+	background: #141414; /* Cor de fundo escura, padrão Netflix */
+	color: #fff; /* Cor do texto principal */
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte moderna e legível */
+	min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+
+header {
+	padding: 40px 0 20px 0; /* Espaçamento acima e abaixo do título */
+	text-align: center; /* Centraliza o conteúdo do header */
+}
+
+
+header h1 {
+	font-size: 2.5rem; /* Tamanho grande para o título */
+	font-weight: 700; /* Deixa o texto em negrito */
+	letter-spacing: 2px; /* Espaçamento entre as letras */
+	color: #e50914; /* Vermelho característico da Netflix */
+	text-shadow: 2px 2px 8px #000; /* Sombra preta para destacar o texto */
+}
+
+
+main {
+	display: flex; /* Usa flexbox para alinhar o conteúdo */
+	flex-direction: column; /* Organiza os elementos em coluna */
+	align-items: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+
+.profiles {
+	display: flex; /* Layout em linha para os perfis */
+	gap: 40px; /* Espaçamento entre os perfis */
+	justify-content: center; /* Centraliza os perfis na horizontal */
+	margin-top: 30px; /* Espaço acima dos perfis */
+}
+
+
+.profile {
+	background: rgba(20, 20, 20, 0.7); /* Fundo escuro translúcido para destacar o perfil */
+	border-radius: 8px; /* Bordas arredondadas */
+	padding: 24px 16px 12px 16px; /* Espaçamento interno */
+	box-shadow: 0 4px 24px rgba(0,0,0,0.7); /* Sombra para dar profundidade */
+	transition: transform 0.2s, box-shadow 0.2s; /* Animação suave ao passar o mouse */
+	cursor: pointer; /* Cursor de mão ao passar o mouse */
+	text-align: center; /* Centraliza o conteúdo do perfil */
+}
+
+
+.profile:hover {
+	transform: scale(1.08); /* Aumenta o perfil ao passar o mouse */
+	box-shadow: 0 8px 32px #e50914; /* Sombra vermelha ao redor do perfil */
+}
+
+
+.profile img {
+	width: 120px; /* Largura fixa da imagem do perfil */
+	height: 120px; /* Altura fixa da imagem do perfil */
+	object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+	border-radius: 8px; /* Bordas arredondadas na imagem */
+	border: 3px solid #e50914; /* Borda vermelha ao redor da imagem */
+	margin-bottom: 12px; /* Espaço abaixo da imagem */
+	background: #222; /* Fundo escuro para imagens sem transparência */
+}
+ul{
+   gap: 40px; /* Espaçamento entre os perfis */
+}
+
+figcaption {
+	color: #fff; /* Cor do texto do nome do perfil */
+	font-size: 1.1rem; /* Tamanho da fonte do nome */
+	font-weight: 500; /* Peso da fonte */
+	letter-spacing: 1px; /* Espaçamento entre letras */
+	margin-top: 4px; /* Espaço acima do nome */
+}
+
+
+@media (max-width: 600px) {
+	.profiles {
+		flex-direction: column; /* Empilha os perfis em coluna no mobile */
+		gap: 24px; /* Reduz o espaçamento entre perfis */
+	}
+	.profile img {
+		width: 90px; /* Imagem menor no mobile */
+		height: 90px;
+	}
+}
+header h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #e50914;
+	text-shadow: 2px 2px 8px #000;
+}
